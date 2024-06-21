@@ -11,7 +11,7 @@ LABEL maintainer="lawtancool"
 #    ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
 #    rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 
-RUN apt-get update && apt-get install -y wget tar unzip build-essential libssl-dev iproute2 liblz4-dev liblzo2-dev libpam0g-dev libpkcs11-helper1-dev libsystemd-dev easy-rsa iptables pkg-config && \
+RUN apt-get update && apt-get install -y wget tar unzip build-essential libssl-dev iproute2 liblz4-dev liblzo2-dev libpam0g-dev libpkcs11-helper1-dev libsystemd-dev easy-rsa iptables pkg-config dnsutils vi && \
     wget https://swupdate.openvpn.org/community/releases/openvpn-2.5.3.tar.gz && tar xvf openvpn-2.5.3.tar.gz && \
     wget https://github.com/Tunnelblick/Tunnelblick/archive/refs/tags/v3.8.6beta05.zip && unzip v3.8.6beta05.zip && \
     cp Tunnelblick-3.8.6beta05/third_party/sources/openvpn/openvpn-2.5.3/patches/*.diff openvpn-2.5.3 && \
